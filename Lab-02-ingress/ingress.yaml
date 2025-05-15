@@ -123,9 +123,6 @@ spec:
       name: hello-world-service
       port:
         number: 8080
-  annotations:
-    kubernetes.io/ingress.class: "gce"
-    kubernetes.io/ingress.allow-http: "true"
   rules:
     - http:
         paths:
