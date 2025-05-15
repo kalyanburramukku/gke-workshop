@@ -129,6 +129,13 @@ spec:
   rules:
     - http:
         paths:
+          - path: /*
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: hello-world-service
+                port:
+                  number: 8080
           - path: /fe
             pathType: ImplementationSpecific
             backend:
@@ -141,12 +148,5 @@ spec:
             backend:
               service:
                 name: be-hello-world-service
-                port:
-                  number: 8080
-          - path: /
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: hello-world-service
                 port:
                   number: 8080
