@@ -118,11 +118,6 @@ kind: Ingress
 metadata:
   name: hello-world-ingress
 spec:
-  defaultBackend:
-    service:
-      name: hello-world-service
-      port:
-        number: 8080
   rules:
     - http:
         paths:
